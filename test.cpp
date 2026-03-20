@@ -1,3 +1,8 @@
+// Name: Ekansh Simgekar
+// Date: 3/20/26
+// Program Name: Time and Date Lab
+
+
 #include <ctime>
 #include <iostream>
 #include <string>
@@ -16,7 +21,7 @@ int main() {
     current += utcOffset * 3600;
     tm* pdt_time = gmtime(&current);
     cout << "Current time in the specified time zone: " << asctime(pdt_time);
-
+// two above was used from the lesson taught earlier, only thing changed was setting the user input to the offset value
     time_t startTime, endTime;
     string answer;
     cout << "Spell Apple.  ";
@@ -25,7 +30,7 @@ int main() {
     cin >> answer;
     time(&endTime);
     double secondsTaken = difftime(endTime, startTime);
-
+// looked at the ctime documentation to find difftime, a helpful tool to calculate time between action.
     cout << "Time taken: " << secondsTaken << " seconds.";
 
 }
